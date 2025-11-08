@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biz haqimizda | Online Magazin</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+    <h1>Biz haqimizda</h1>
+    <nav>
+        <a href="{% url 'index' %}">Bosh sahifa</a>
+        <a href="{% url 'products' %}">Mahsulotlar</a>
+        <a href="{% url 'add-product' %}">Mahsulot qo'shish</a>
+        <a href="{% url 'about' %}" class="active">Biz haqimizda</a>
+        <a href="{% url 'contact' %}">Aloqa</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Kompaniyamiz haqida</h2>
+    <p>Biz 2025-yildan beri sifatli mahsulotlarni mijozlarga taqdim etamiz. Maqsadimiz — qulay va ishonchli onlayn xarid tizimi yaratish.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Online Magazin</p>
+</footer>
+</body>
+</html>

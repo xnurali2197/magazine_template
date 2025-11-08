@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahsulotlar | Online Magazin</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+    <h1>Mahsulotlar</h1>
+    <nav>
+        <a href="{% url 'index' %}">Bosh sahifa</a>
+        <a href="{% url 'products' %}" class="active">Mahsulotlar</a>
+        <a href="{% url 'add-product' %}">Mahsulot qo'shish</a>
+        <a href="{% url 'about' %}">Biz haqimizda</a>
+        <a href="{% url 'contact' %}">Aloqa</a>
+    </nav>
+</header>
+
+<section class="product-list">
+    <h2>Smartfonlar</h2>
+
+    {% for product in products %}
+    <div class="product-card">
+        <a href="{% url 'product_detail' product_id=product.id %}">
+            <img src="{{ product.image }}" alt="{{ product.name }}">
+        </a>
+        <h3>{{ product.name }}</h3>
+        <p><strong>Narxi:</strong> {{ product.price }} so'm</p>
+        <p><strong>Xarakteristikasi:</strong> {{ product.description }}</p>
+    </div>
+    {% endfor %}
+</section>
+
+<footer>
+    <p>&copy; 2025 Online Magazin</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahsulotlar | Online Magazin</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+    <h1>Mahsulotlar</h1>
+    <nav>
+        <a href="{% url 'index' %}">Bosh sahifa</a>
+        <a href="{% url 'products' %}" class="active">Mahsulotlar</a>
+        <a href="{% url 'add-product' %}">Mahsulot qo'shish</a>
+        <a href="{% url 'about' %}">Biz haqimizda</a>
+        <a href="{% url 'contact' %}">Aloqa</a>
+    </nav>
+</header>
+
+<section class="product-list">
+    <h2>Smartfonlar</h2>
+
+    <div class="product-card">
+        <a href="{% url 'product_detail' %}">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-family-hero" alt="iPhone 14">
+        </a>
+        <h3>iPhone 14 Pro</h3>
+        <p><strong>Narxi:</strong> 13 500 000 so'm</p>
+        <p><strong>Xarakteristikasi:</strong> 6.1" Super Retina XDR, A16 Bionic, 48MP kamera, 6GB RAM</p>
+    </div>
+
+    <div class="product-card">
+        <a href="{% url 'product_detail' %}">
+            <img src="https://images.samsung.com/is/image/samsung/p6pim/levant/galaxy-s23/gallery/levant-galaxy-s23-s911-sm-s911bzkdmea-thumb-534826939" alt="Samsung Galaxy S23">
+        </a>
+        <h3>Samsung Galaxy S23</h3>
+        <p><strong>Narxi:</strong> 11 800 000 so'm</p>
+        <p><strong>Xarakteristikasi:</strong> 6.1" AMOLED, Snapdragon 8 Gen 2, 50MP kamera, 8GB RAM</p>
+    </div>
+
+    <div class="product-card">
+        <a href="{% url 'product_detail' %}">
+            <img src="https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-13-5g-1.jpg" alt="Xiaomi Redmi Note 13">
+        </a>
+        <h3>Xiaomi Redmi Note 13</h3>
+        <p><strong>Narxi:</strong> 4 200 000 so‘m</p>
+        <p><strong>Xarakteristikasi:</strong> 6.6" AMOLED, Dimensity 6100+, 108MP kamera, 8GB RAM</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Online Magazin</p>
+</footer>
+</body>
+</html>

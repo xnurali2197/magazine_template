@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aloqa | Online Magazin</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+    <h1>Aloqa</h1>
+    <nav>
+        <a href="{% url 'index' %}">Bosh sahifa</a>
+        <a href="{% url 'products' %}">Mahsulotlar</a>
+        <a href="{% url 'add-product' %}">Mahsulot qo'shish</a>
+        <a href="{% url 'about' %}">Biz haqimizda</a>
+        <a href="{% url 'contact' %}" class="active">Aloqa</a>
+    </nav>
+</header>
+
+<section class="form-section">
+    <h2>Biz bilan bog‘laning</h2>
+    <form>
+        <label>Ismingiz:</label>
+        <input type="text" required>
+
+        <label>Email:</label>
+        <input type="email" required>
+
+        <label>Xabaringiz:</label>
+        <textarea rows="5" required></textarea>
+
+        <button type="submit">Yuborish</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Online Magazin</p>
+</footer>
+</body>
+</html>

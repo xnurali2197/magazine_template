@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Galaxy S23 | Online Magazin</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+    <h1>Samsung Galaxy S23</h1>
+    <nav>
+        <a href="{% url 'index' %}">Bosh sahifa</a>
+        <a href="{% url 'products' %}">Mahsulotlar</a>
+        <a href="{% url 'about' %}">Biz haqimizda</a>
+        <a href="{% url 'contact' %}">Aloqa</a>
+    </nav>
+</header>
+
+<section class="product-detail">
+    <img src="{{ product.image }}" alt="{{ product.name }}">
+    <h2>{{ product.name }}</h2>
+    <p><strong>Narxi:</strong> {{ product.price }} so'm</p>
+    <p><strong>Xarakteristikasi:</strong> {{ product.description }}</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Online Magazin</p>
+</footer>
+</body>
+</html>
