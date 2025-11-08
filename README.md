@@ -1,0 +1,1 @@
+# magazine_template
